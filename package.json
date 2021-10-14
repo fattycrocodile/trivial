@@ -1,0 +1,87 @@
+{
+  "name": "g2i-fmoliveira",
+  "version": "0.1.0",
+  "author": {
+    "name": "Filipe Oliveira",
+    "email": "contato@fmoliveira.com.br",
+    "url": "https://fmoliveira.dev"
+  },
+  "engines": {
+    "node": "^12 || >=14"
+  },
+  "private": true,
+  "dependencies": {
+    "@testing-library/cypress": "^7.0.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.6",
+    "@xstate/react": "^1.0.1",
+    "immer": "^7.0.14",
+    "msw": "^0.21.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet-async": "^1.0.7",
+    "react-query": "^2.26.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "tailwindcss": "^1.9.6",
+    "typescript": "^4.0.5",
+    "web-vitals": "^0.2.4",
+    "xstate": "^4.13.0"
+  },
+  "devDependencies": {
+    "@axe-core/react": "^4.0.0",
+    "@testing-library/react-hooks": "^3.4.2",
+    "cypress": "^5.6.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "react-test-renderer": "^17.0.1",
+    "serve": "^11.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:css": "tailwindcss build src/components/Layout/_tailwind.init.css -o src/components/Layout/tailwind.css",
+    "prestart": "yarn prebuild",
+    "prebuild": "yarn build:css",
+    "serve": "serve -s build -l 3000",
+    "test": "react-scripts test",
+    "e2e": "cypress run",
+    "e2e:watch": "cypress open",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,html}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
