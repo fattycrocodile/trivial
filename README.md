@@ -12,9 +12,16 @@ yarn
 yarn start
 ```
 
+Or
+
+```sh
+git clone git@github.com:codinglittlecat/react-trivia.git
+docker-compose up -d
+```
+
 ## What I used
 
-- tailwind css for styling.
+- docker.
 - tailwind css for styling.
 - unit test.
 - cypress for e2e tesing.
